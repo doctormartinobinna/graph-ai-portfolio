@@ -34,7 +34,7 @@
     .progress{height:10px;background:#334155;border-radius:9999px;overflow:hidden}
     .progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.5s ease-in-out}
     #course{position:relative;color:var(--text)}
-    #course::before{content:"";position:absolute;inset:0;background:url('https://thegraphcourses.org/wp-content/uploads/2024/03/code-background.png') center/cover fixed;z-index:-2}
+    #course::before{content:"";position:absolute;inset:0;background:url("https://thegraphcourses.org/wp-content/uploads/2024/03/code-background.png") center/cover fixed;z-index:-2}
     #course::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,163,74,.8),rgba(13,148,136,.8));z-index:-1}
     #course .content{position:relative;z-index:1;background:rgba(15,23,42,.6);padding:2rem;border-radius:1rem}
     #weeks ul,#projects ul{list-style:none;display:grid;gap:.75rem;margin-top:1rem}
@@ -55,7 +55,7 @@
       <a href="#projects">My Projects</a>
     </nav>
     <div class="hero">
-      <img src="https://via.placeholder.com/180?text=Your+Photo" alt="Your portrait">
+      <img src="https://github.com/doctormartinobinna/graph-ai-portfolio/blob/main/pix3.jpg?raw=true" alt="Your portrait">
       <h1>Amadi Obinna Martin</h1>
       <h2>Generative AI Enthusiast &amp; Software Engineer</h2>
       <p>Welcome to my portfolio for the <strong>Generative AI for Work &amp; Research Productivity Bootcamp 2025 Q2</strong>.</p>
@@ -124,7 +124,7 @@
     const observer=new IntersectionObserver(entries=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
-          entry.target.querySelectorAll(".progress-bar").forEach(bar=>bar.style.width=bar.dataset.width);
+          entry.target.querySelectorAll(".progress-bar").forEach(bar=>bar.style.width=bar.dataset-width);
           observer.unobserve(entry.target);
         }
       });
