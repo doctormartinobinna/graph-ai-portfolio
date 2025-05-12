@@ -6,47 +6,49 @@
   <title>Amadi Obinna Martin – Generative AI Portfolio</title>
   <style>
     :root{
-      --accent:#16a34a;
-      --accent2:#0d9488;
-      --bg:#0f172a;
-      --text:#f8fafc;
-      --serif:"Georgia","Times New Roman",serif;
+      --accent: #16a34a;
+      --accent2: #0d9488;
+      --bg-dark: #0f172a;
+      --bg-light: #1e293b;
+      --text: #f8fafc;
+      --serif: "Georgia","Times New Roman",serif;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-    a{text-decoration:none;color:var(--accent2)}
-    nav{position:fixed;top:0;left:0;width:100%;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);display:flex;justify-content:center;gap:2rem;padding:.75rem 0;z-index:20}
-    nav a{font-weight:600;text-transform:uppercase;letter-spacing:.05em;transition:color .3s}
-    nav a:hover{color:var(--accent)}
-    header{height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
-    .hero{display:flex;flex-wrap:wrap;gap:2rem;max-width:960px;margin:auto}
-    .hero-image{flex:1 1 250px;display:flex;justify-content:center;align-items:center}
-    .hero-image img{width:250px;height:250px;border-radius:50%;object-fit:cover}
-    .hero-text{flex:2 1 400px;color:var(--text)}
-    .hero-text h1{font-family:var(--serif);font-size:3rem;margin-bottom:.5rem}
-    .hero-text h2{font-size:1.5rem;color:var(--accent2);margin-bottom:1rem}
-    .hero-text p{margin-bottom:1.5rem;max-width:600px}
-    .hero-text .ai-projects{margin-top:1rem}
-    .hero-text .ai-projects h3{font-family:var(--serif);font-size:1.5rem;color:var(--accent);margin-bottom:.75rem}
-    .hero-text .ai-projects ul{list-style:disc inside}
-    section{padding:4rem 1rem;max-width:960px;margin:auto}
-    section h2{font-family:var(--serif);font-size:2rem;color:var(--accent);margin-bottom:1.5rem;text-align:center}
-    #about .skill{margin-bottom:1rem}
-    #about .skill-label{display:flex;justify-content:space-between;font-weight:600;margin-bottom:.25rem}
-    .progress{height:10px;background:#334155;border-radius:9999px;overflow:hidden}
-    .progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.5s ease-in-out}
-    #course{position:relative;color:var(--text)}
-    #course::before{content:"";position:absolute;inset:0;background:url("https://thegraphcourses.org/wp-content/uploads/2024/03/code-background.png") center/cover fixed;z-index:-2}
-    #course::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,163,74,.8),rgba(13,148,136,.8));z-index:-1}
-    #course .content{position:relative;z-index:1;background:rgba(15,23,42,.6);padding:2rem;border-radius:1rem}
-    #weeks ul,#projects ul{list-style:none;display:grid;gap:.75rem;margin-top:1rem}
-    #weeks li,#projects li{background:#1e293b;padding:1rem;border-radius:.5rem;display:flex;justify-content:space-between;align-items:center;transition:transform .3s}
-    #weeks li:hover,#projects li:hover{transform:translateY(-3px)}
-    #projects a{color:var(--accent2);font-weight:600}
-    footer{text-align:center;padding:2rem 1rem;background:#1e293b;font-size:.875rem}
-    .card3d{transform:perspective(800px) rotateX(0deg) rotateY(0deg);transition:transform .4s}
-    .card3d:hover{transform:perspective(800px) rotateX(4deg) rotateY(-4deg)}
+    * {box-sizing:border-box; margin:0; padding:0}
+    html {scroll-behavior:smooth}
+    body {font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg-dark); line-height:1.6}
+    a {text-decoration:none; color: var(--accent2)}
+    nav {position: fixed; top:0; left:0; width:100%; background:rgba(15,23,42,0.8); backdrop-filter: blur(10px); display:flex; justify-content:center; gap:2rem; padding:1rem 0; z-index:100}
+    nav a {font-weight:600; text-transform:uppercase; letter-spacing:0.05em; transition: color 0.3s}
+    nav a:hover {color: var(--accent)}
+    header {height:100vh; display:flex; align-items:center; justify-content:center; padding-top:4rem; background:var(--bg-dark)}
+    .hero {display:flex; flex-wrap:wrap; gap:2rem; max-width:960px; margin:auto}
+    .hero-image {flex:1 1 250px; display:flex; justify-content:center; align-items:center}
+    .hero-image img {width:300px; height:300px; object-fit:cover; border-radius:0}
+    .hero-text {flex:2 1 400px}
+    .hero-text h1 {font-family: var(--serif); font-size:3rem; margin-bottom:0.5rem}
+    .hero-text h2 {font-size:1.5rem; color: var(--accent2); margin-bottom:1rem}
+    .hero-text p {margin-bottom:1.5rem; max-width:600px}
+    .hero-text .ai-projects h3 {font-family:var(--serif); font-size:1.5rem; color:var(--accent); margin-bottom:0.75rem}
+    .ai-projects ul {list-style: disc inside; margin-left:1rem}
+    section {padding:4rem 1rem; max-width:960px; margin:auto}
+    section:nth-of-type(even) {background: var(--bg-light)}
+    section:nth-of-type(odd) {background: var(--bg-dark)}
+    section h2 {font-family:var(--serif); font-size:2rem; color:var(--accent); margin-bottom:1.5rem; text-align:center}
+    #about .skill {margin-bottom:1rem}
+    #about .skill-label {display:flex; justify-content:space-between; font-weight:600; margin-bottom:0.25rem}
+    .progress {height:10px; background:#334155; border-radius:9999px; overflow:hidden}
+    .progress-bar {height:100%; width:0; background: linear-gradient(90deg, var(--accent), var(--accent2)); transition: width 1.5s ease-in-out}
+    #course {position:relative; color:var(--text)}
+    #course::before {content:""; position:absolute; inset:0; background:url("https://thegraphcourses.org/wp-content/uploads/2024/03/code-background.png") center/cover fixed; opacity:0.3; z-index:-2}
+    #course::after {content:""; position:absolute; inset:0; background:linear-gradient(135deg, rgba(22,163,74,0.7), rgba(13,148,136,0.7)); z-index:-1}
+    #course .content {position:relative; z-index:1; background:rgba(15,23,42,0.7); padding:2rem; border-radius:1rem}
+    #weeks ul, #projects ul {list-style:none; display:grid; gap:0.75rem; margin-top:1rem}
+    #weeks li, #projects li {background: rgba(15,23,42,0.9); padding:1rem; border-radius:0.5rem; display:flex; justify-content:space-between; align-items:center; transition: transform 0.3s}
+    #weeks li:hover, #projects li:hover {transform: translateY(-3px)}
+    #projects a {color:var(--accent2); font-weight:600}
+    footer {text-align:center; padding:2rem 1rem; background: var(--bg-light); font-size:0.875rem}
+    .card3d {transform:perspective(800px) rotateX(0deg) rotateY(0deg); transition:transform 0.4s}
+    .card3d:hover {transform:perspective(800px) rotateX(4deg) rotateY(-4deg)}
   </style>
 </head>
 <body>
@@ -69,8 +71,8 @@
           <h3>Featured AI Projects</h3>
           <ul>
             <li><strong>SmartDoc Assistant</strong>: An AI‑powered document generation tool that uses GPT‑4 to automate report and presentation creation. Implemented NLP prompts and template chaining for context-aware outputs.</li>
-            <li><strong>DataViz IQ</strong>: A no‑code dashboard builder leveraging LangChain and Plotly. Designed an AI pipeline that ingests CSV data, auto‑suggests visualizations, and refines queries via semantic search.</li>
-            <li><strong>ChatFlow Bot</strong>: A custom chatbot integrated into client intranets, powered by RAG (Retrieval‑Augmented Generation). Developed vector store indexing and fine‑tuned embeddings for domain‑specific Q&A.</li>
+            <li><strong>DataViz IQ</strong>: A no-code dashboard builder leveraging LangChain and Plotly. Designed an AI pipeline that ingests CSV data, auto-suggests visualizations, and refines queries via semantic search.</li>
+            <li><strong>ChatFlow Bot</strong>: A custom chatbot integrated into client intranets, powered by RAG (Retrieval‑Augmented Generation). Developed vector store indexing and fine-tuned embeddings for domain‑specific Q&A.</li>
           </ul>
         </div>
       </div>
@@ -93,11 +95,11 @@
   <section id="course">
     <div class="content card3d">
       <h2>About the Course</h2>
-      <p>The <em>Generative AI for Work &amp; Research Productivity Bootcamp 2025 Q2</em> is an intensive 8‑week hands‑on program. Whether you want to enhance productivity, explore research applications, or develop client solutions, you’ll acquire practical skills to start using AI effectively—without coding.</p>
+      <p>The <em>Generative AI for Work &amp; Research Productivity Bootcamp 2025 Q2</em> is an intensive 8-week hands-on program. Whether you want to enhance productivity, explore research applications, or develop client solutions, you’ll acquire practical skills to start using AI effectively—without coding.</p>
       <ul>
         <li>Create professional websites, documents, and presentations with AI assistance</li>
         <li>Perform literature reviews, analyze data, and build dashboards using intuitive AI tools</li>
-        <li>Design custom chatbots that answer domain‑specific questions</li>
+        <li>Design custom chatbots that answer domain-specific questions</li>
         <li>Set up automated workflows that operate around the clock</li>
         <li>Utilize AI for creating and editing images, videos, and design materials</li>
         <li>Develop practical AI solutions that integrate into daily projects</li>
@@ -124,9 +126,9 @@
     <p>Selected projects I’ve delivered for clients and organizations:</p>
     <ul>
       <li><span>School Management System – </span><a href="https://www.apearlschools.com" target="_blank">apearlschools.com</a> <span>(2020)</span></li>
-      <li><span>A point of Sales System – </span><a href="https://ccwilliamsltd.com.ng" target="_blank">parisafricana.com</a> <span>(2021)</span></li>
+      <li><span>Point of Sales System – </span><a href="https://ccwilliamsltd.com.ng" target="_blank">ccwilliamsltd.com.ng</a> <span>(2021)</span></li>
       <li><span>Bitcoin Investment Website – </span><a href="https://btc-currenttrade.com" target="_blank">btc-currenttrade.com</a> <span>(2021)</span></li>
-      <li><span>An Award Showcase Website – </span><a href="https://stflairsglobal.com" target="_blank">deinandkalconsulting.com</a> <span>(2020)</span></li>
+      <li><span>Award Showcase Website – </span><a href="https://stflairsglobal.com" target="_blank">stflairsglobal.com</a> <span>(2020)</span></li>
     </ul>
   </section>
 
@@ -135,14 +137,16 @@
   </footer>
 
   <script>
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.querySelectorAll(".progress-bar").forEach(bar=>bar.style.width=bar.dataset-width);
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll(".progress-bar").forEach(bar => {
+            bar.style.width = bar.dataset.width;
+          });
           observer.unobserve(entry.target);
         }
       });
-    },{threshold:0.4});
+    }, { threshold: 0.4 });
     observer.observe(document.querySelector("#about"));
   </script>
 </body>
