@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amadi Obinna Martin – Generative AI Portfolio</title>
+  <style>
+    :root{
+      --accent:#16a34a;
+      --accent2:#0d9488;
+      --bg:#0f172a;
+      --text:#f8fafc;
+      --serif:"Georgia","Times New Roman",serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    a{text-decoration:none;color:var(--accent2)}
+    header nav{position:fixed;top:0;left:0;width:100%;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);display:flex;justify-content:center;gap:2rem;padding:.75rem 0;z-index:20}
+    header nav a{font-weight:600;text-transform:uppercase;letter-spacing:.05em;transition:color .3s}
+    header nav a:hover{color:var(--accent)}
+    header{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem}
+    .hero{display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+    .hero img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--accent)}
+    .hero h1{font-family:var(--serif);font-size:2.5rem}
+    .hero h2{font-size:1.25rem;color:var(--accent2)}
+    .hero .buttons{display:flex;gap:1rem}
+    .hero .buttons a{padding:.75rem 1.5rem;border:2px solid var(--accent);border-radius:9999px;font-weight:600;transition:background .3s,transform .3s}
+    .hero .buttons a:hover{background:var(--accent);transform:translateY(-2px)}
+    section{padding:4rem 1rem;max-width:960px;margin:auto}
+    section h2{font-family:var(--serif);font-size:2rem;color:var(--accent);margin-bottom:1.5rem;text-align:center}
+    #about .skill{margin-bottom:1rem}
+    #about .skill-label{display:flex;justify-content:space-between;font-weight:600;margin-bottom:.25rem}
+    .progress{height:10px;background:#334155;border-radius:9999px;overflow:hidden}
+    .progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.5s ease-in-out}
+    #course{position:relative;color:var(--text)}
+    #course::before{content:"";position:absolute;inset:0;background:url('https://thegraphcourses.org/wp-content/uploads/2024/03/code-background.png') center/cover fixed;z-index:-2}
+    #course::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(22,163,74,.8),rgba(13,148,136,.8));z-index:-1}
+    #course .content{position:relative;z-index:1;background:rgba(15,23,42,.6);padding:2rem;border-radius:1rem}
+    #weeks ul,#projects ul{list-style:none;display:grid;gap:.75rem;margin-top:1rem}
+    #weeks li,#projects li{background:#1e293b;padding:1rem;border-radius:.5rem;display:flex;justify-content:space-between;align-items:center;transition:transform .3s}
+    #weeks li:hover,#projects li:hover{transform:translateY(-3px)}
+    #projects a{color:var(--accent2);font-weight:600}
+    footer{text-align:center;padding:2rem 1rem;background:#1e293b;font-size:.875rem}
+    .card3d{transform:perspective(800px) rotateX(0deg) rotateY(0deg);transition:transform .4s}
+    .card3d:hover{transform:perspective(800px) rotateX(4deg) rotateY(-4deg)}
+  </style>
+</head>
+<body>
+  <header id="hero">
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#course">About the Course</a>
+      <a href="#weeks">Weekly Submission</a>
+      <a href="#projects">My Projects</a>
+    </nav>
+    <div class="hero">
+      <img src="https://via.placeholder.com/180?text=Your+Photo" alt="Your portrait">
+      <h1>Amadi Obinna Martin</h1>
+      <h2>Generative AI Enthusiast &amp; Software Engineer</h2>
+      <p>Welcome to my portfolio for the <strong>Generative AI for Work &amp; Research Productivity Bootcamp 2025 Q2</strong>.</p>
+      <div class="buttons"><a href="#about">Explore</a></div>
+    </div>
+  </header>
+
+  <section id="about" class="card3d">
+    <h2>About Me</h2>
+    <p>Innovative tech mind with 10+ years of experience developing software solutions and training professionals. Skilled at diagnosing problems, creating intuitive applications, and leading teams to deliver impact‑driven products.</p>
+    <div class="skills">
+      <div class="skill"><div class="skill-label"><span>Web Development</span><span>90%</span></div><div class="progress"><div class="progress-bar" data-width="90%"></div></div></div>
+      <div class="skill"><div class="skill-label"><span>Project Management</span><span>85%</span></div><div class="progress"><div class="progress-bar" data-width="85%"></div></div></div>
+      <div class="skill"><div class="skill-label"><span>Budgeting & Cost Analysis</span><span>80%</span></div><div class="progress"><div class="progress-bar" data-width="80%"></div></div></div>
+      <div class="skill"><div class="skill-label"><span>ERP Administration</span><span>75%</span></div><div class="progress"><div class="progress-bar" data-width="75%"></div></div></div>
+      <div class="skill"><div class="skill-label"><span>Staff & User Training</span><span>85%</span></div><div class="progress"><div class="progress-bar" data-width="85%"></div></div></div>
+      <div class="skill"><div class="skill-label"><span>Process Improvement</span><span>88%</span></div><div class="progress"><div class="progress-bar" data-width="88%"></div></div></div>
+    </div>
+  </section>
+
+  <section id="course">
+    <div class="content card3d">
+      <h2>About the Course</h2>
+      <p>The <em>Generative AI for Work &amp; Research Productivity Bootcamp 2025 Q2</em> is an intensive 8‑week hands‑on program. Whether you want to enhance productivity, explore research applications, or develop client solutions, you’ll acquire practical skills to start using AI effectively—without coding.</p>
+      <ul>
+        <li>Create professional websites, documents, and presentations with AI assistance</li>
+        <li>Perform literature reviews, analyze data, and build dashboards using intuitive AI tools</li>
+        <li>Design custom chatbots that answer domain‑specific questions</li>
+        <li>Set up automated workflows that operate around the clock</li>
+        <li>Utilize AI for creating and editing images, videos, and design materials</li>
+        <li>Develop practical AI solutions that integrate into daily projects</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="weeks" class="card3d">
+    <h2>Weekly Submission</h2>
+    <ul>
+      <li><span>Week 1 – <a href="#" id="week1link">AI‑Course Portfolio Website</a></span><span>✅</span></li>
+      <li><span>Week 2 – Coming soon</span></li>
+      <li><span>Week 3 – Coming soon</span></li>
+      <li><span>Week 4 – Coming soon</span></li>
+      <li><span>Week 5 – Coming soon</span></li>
+      <li><span>Week 6 – Coming soon</span></li>
+      <li><span>Week 7 – Coming soon</span></li>
+      <li><span>Week 8 – Coming soon</span></li>
+    </ul>
+  </section>
+
+  <section id="projects" class="card3d">
+    <h2>My Projects</h2>
+    <p>Selected projects I’ve delivered for clients and organizations:</p>
+    <ul>
+      <li><span>School Management System – </span><a href="https://www.apearlschools.com" target="_blank">apearlschools.com</a> <span>(2020)</span></li>
+      <li><span>School Management System – </span><a href="https://parisafricana.com" target="_blank">parisafricana.com</a> <span>(2021)</span></li>
+      <li><span>Bitcoin Investment Website – </span><a href="https://btc-currenttrade.com" target="_blank">btc-currenttrade.com</a> <span>(2021)</span></li>
+      <li><span>Course Ware Management System – </span><a href="https://deinandkalconsulting.com" target="_blank">deinandkalconsulting.com</a> <span>(2020)</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Amadi Obinna Martin. Built with love and a splash of Emerald.
+  </footer>
+
+  <script>
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll(".progress-bar").forEach(bar=>bar.style.width=bar.dataset.width);
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.4});
+    observer.observe(document.querySelector("#about"));
+  </script>
+</body>
+</html>
