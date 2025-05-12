@@ -16,17 +16,20 @@
     html{scroll-behavior:smooth}
     body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
     a{text-decoration:none;color:var(--accent2)}
-    header nav{position:fixed;top:0;left:0;width:100%;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);display:flex;justify-content:center;gap:2rem;padding:.75rem 0;z-index:20}
-    header nav a{font-weight:600;text-transform:uppercase;letter-spacing:.05em;transition:color .3s}
-    header nav a:hover{color:var(--accent)}
-    header{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem}
-    .hero{display:flex;flex-direction:column;align-items:center;gap:1.5rem}
-    .hero img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--accent)}
-    .hero h1{font-family:var(--serif);font-size:2.5rem}
-    .hero h2{font-size:1.25rem;color:var(--accent2)}
-    .hero .buttons{display:flex;gap:1rem}
-    .hero .buttons a{padding:.75rem 1.5rem;border:2px solid var(--accent);border-radius:9999px;font-weight:600;transition:background .3s,transform .3s}
-    .hero .buttons a:hover{background:var(--accent);transform:translateY(-2px)}
+    nav{position:fixed;top:0;left:0;width:100%;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);display:flex;justify-content:center;gap:2rem;padding:.75rem 0;z-index:20}
+    nav a{font-weight:600;text-transform:uppercase;letter-spacing:.05em;transition:color .3s}
+    nav a:hover{color:var(--accent)}
+    header{height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+    .hero{display:flex;flex-wrap:wrap;gap:2rem;max-width:960px;margin:auto}
+    .hero-image{flex:1 1 250px;display:flex;justify-content:center;align-items:center}
+    .hero-image img{width:250px;height:250px;border-radius:50%;object-fit:cover}
+    .hero-text{flex:2 1 400px;color:var(--text)}
+    .hero-text h1{font-family:var(--serif);font-size:3rem;margin-bottom:.5rem}
+    .hero-text h2{font-size:1.5rem;color:var(--accent2);margin-bottom:1rem}
+    .hero-text p{margin-bottom:1.5rem;max-width:600px}
+    .hero-text .ai-projects{margin-top:1rem}
+    .hero-text .ai-projects h3{font-family:var(--serif);font-size:1.5rem;color:var(--accent);margin-bottom:.75rem}
+    .hero-text .ai-projects ul{list-style:disc inside}
     section{padding:4rem 1rem;max-width:960px;margin:auto}
     section h2{font-family:var(--serif);font-size:2rem;color:var(--accent);margin-bottom:1.5rem;text-align:center}
     #about .skill{margin-bottom:1rem}
@@ -47,31 +50,42 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#course">About the Course</a>
+    <a href="#weeks">Weekly Submission</a>
+    <a href="#projects">My Projects</a>
+  </nav>
   <header id="hero">
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#course">About the Course</a>
-      <a href="#weeks">Weekly Submission</a>
-      <a href="#projects">My Projects</a>
-    </nav>
     <div class="hero">
-      <img src="https://github.com/doctormartinobinna/graph-ai-portfolio/blob/main/pix3.jpg?raw=true" alt="Your portrait">
-      <h1>Amadi Obinna Martin</h1>
-      <h2>Generative AI Enthusiast &amp; Software Engineer</h2>
-      <p>Welcome to my portfolio for the <strong>Generative AI for Work &amp; Research Productivity Bootcamp 2025 Q2</strong>.</p>
-      <div class="buttons"><a href="#about">Explore</a></div>
+      <div class="hero-image">
+        <img src="https://github.com/doctormartinobinna/graph-ai-portfolio/blob/main/pix3.jpg?raw=true" alt="Amadi Obinna Martin">
+      </div>
+      <div class="hero-text">
+        <h1>Amadi Obinna Martin</h1>
+        <h2>Generative AI Enthusiast &amp; Software Engineer</h2>
+        <p>Innovative tech mind with 10+ years of experience developing software solutions and training professionals. Skilled at diagnosing problems, creating intuitive applications, and leading teams to deliver impact‑driven products.</p>
+        <div class="ai-projects">
+          <h3>Featured AI Projects</h3>
+          <ul>
+            <li><strong>SmartDoc Assistant</strong>: An AI‑powered document generation tool that uses GPT‑4 to automate report and presentation creation. Implemented NLP prompts and template chaining for context-aware outputs.</li>
+            <li><strong>DataViz IQ</strong>: A no‑code dashboard builder leveraging LangChain and Plotly. Designed an AI pipeline that ingests CSV data, auto‑suggests visualizations, and refines queries via semantic search.</li>
+            <li><strong>ChatFlow Bot</strong>: A custom chatbot integrated into client intranets, powered by RAG (Retrieval‑Augmented Generation). Developed vector store indexing and fine‑tuned embeddings for domain‑specific Q&A.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
   <section id="about" class="card3d">
     <h2>About Me</h2>
-    <p>Innovative tech mind with 10+ years of experience developing software solutions and training professionals. Skilled at diagnosing problems, creating intuitive applications, and leading teams to deliver impact‑driven products.</p>
+    <p>Below are the core skills I’m sharpening during this course:</p>
     <div class="skills">
       <div class="skill"><div class="skill-label"><span>Web Development</span><span>90%</span></div><div class="progress"><div class="progress-bar" data-width="90%"></div></div></div>
       <div class="skill"><div class="skill-label"><span>Project Management</span><span>85%</span></div><div class="progress"><div class="progress-bar" data-width="85%"></div></div></div>
-      <div class="skill"><div class="skill-label"><span>Budgeting & Cost Analysis</span><span>80%</span></div><div class="progress"><div class="progress-bar" data-width="80%"></div></div></div>
+      <div class="skill"><div class="skill-label"><span>Budgeting &amp; Cost Analysis</span><span>80%</span></div><div class="progress"><div class="progress-bar" data-width="80%"></div></div></div>
       <div class="skill"><div class="skill-label"><span>ERP Administration</span><span>75%</span></div><div class="progress"><div class="progress-bar" data-width="75%"></div></div></div>
-      <div class="skill"><div class="skill-label"><span>Staff & User Training</span><span>85%</span></div><div class="progress"><div class="progress-bar" data-width="85%"></div></div></div>
+      <div class="skill"><div class="skill-label"><span>Staff &amp; User Training</span><span>85%</span></div><div class="progress"><div class="progress-bar" data-width="85%"></div></div></div>
       <div class="skill"><div class="skill-label"><span>Process Improvement</span><span>88%</span></div><div class="progress"><div class="progress-bar" data-width="88%"></div></div></div>
     </div>
   </section>
